@@ -38,6 +38,7 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, net.activia.dmb.domain.Promotion.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
